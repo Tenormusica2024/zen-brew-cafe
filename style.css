@@ -1,0 +1,352 @@
+:root {
+    --color-bg: #1a1a2e;
+    --color-text: #f4f4f0;
+    --color-accent: #c5a059;
+    --color-secondary: #6a8a4f;
+    --font-serif: 'Noto Serif JP', serif;
+    --font-sans: 'Zen Kaku Gothic New', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+    cursor: none;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/washi.png');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Custom Cursor */
+#cursor-dot, #cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+#cursor-dot {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-accent);
+}
+
+#cursor-outline {
+    width: 40px;
+    height: 40px;
+    border: 1px solid var(--color-accent);
+    transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+/* Typography */
+h1, h2, h3 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+}
+
+.vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    letter-spacing: 0.5em;
+    font-size: 4rem;
+    line-height: 1.5;
+}
+
+/* Header */
+.site-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    mix-blend-mode: difference;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('assets/hero_bg.png'); /* Updated to generated image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    transform: scale(1.1);
+    transition: transform 10s ease-out;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.subtitle {
+    margin-top: 2rem;
+    letter-spacing: 0.2em;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards 1s;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0.7;
+}
+
+.scroll-indicator .line {
+    width: 1px;
+    height: 60px;
+    background-color: var(--color-text);
+    animation: scrollLine 2s infinite;
+}
+
+@keyframes scrollLine {
+    0% { transform-origin: top; transform: scaleY(0); }
+    50% { transform-origin: top; transform: scaleY(1); }
+    51% { transform-origin: bottom; transform: scaleY(1); }
+    100% { transform-origin: bottom; transform: scaleY(0); }
+}
+
+/* About Section */
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.text-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.text-reveal.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text-reveal h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--color-accent);
+}
+
+.text-reveal p {
+    font-size: 1.1rem;
+    line-height: 2.5;
+    font-feature-settings: "palt";
+}
+
+/* Visit Section */
+.visit-section {
+    background-image: url('assets/wood.png');
+    background-size: 500px; /* Repeat pattern */
+    position: relative;
+    color: #e0e0e0; /* Lighter text on dark wood */
+}
+
+.visit-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Darken wood */
+    z-index: 1;
+}
+
+.visit-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.visit-info h3 {
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.visit-info p {
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+    padding: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+    opacity: 0.6;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-accent);
+}
+
+/* Menu Section */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.menu-item {
+    position: relative;
+    /* Removed invalid group property */
+}
+
+.menu-img-wrapper {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.menu-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.menu-item:hover .menu-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.menu-info {
+    text-align: center;
+}
+
+.menu-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+.price {
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+}
+
+.desc {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
