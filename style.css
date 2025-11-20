@@ -75,13 +75,13 @@ h1, h2, h3 {
 
 @media (max-width: 768px) {
     .page-hero .hero-content {
-        padding-top: 80px;
+        padding-top: 120px;
     }
 }
 
 @media (max-width: 480px) {
     .page-hero .hero-content {
-        padding-top: 100px;
+        padding-top: 150px;
     }
 }
 
