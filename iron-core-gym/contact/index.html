@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTACT | IRON CORE GYM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        input, textarea {
+            padding: 15px;
+            background-color: var(--secondary-bg);
+            border: 1px solid #333;
+            color: #fff;
+            font-family: var(--font-body);
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+        }
+
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .contact-info p {
+            margin-bottom: 15px;
+            color: #aaa;
+        }
+
+        @media (max-width: 768px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">IRON CORE</div>
+        <div class="lang-switch" id="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ja">JP</button>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="../index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="../about/index.html" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="../service/index.html" data-i18n="nav.service">SERVICE</a></li>
+                <li><a href="../price/index.html" data-i18n="nav.price">PRICE</a></li>
+                <li><a href="index.html" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 60vh; background-image: url('../assets/interior.jpg');">
+        <div class="hero-content">
+            <h1 data-i18n="contact_page.hero_title">Contact Us</h1>
+            <p data-i18n="contact_page.hero_subtitle">Start Your Journey Today</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-i18n="contact_page.section_title">GET IN TOUCH</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form>
+                    <input type="text" data-i18n-placeholder="contact_page.name_placeholder" placeholder="Name" required>
+                    <input type="email" data-i18n-placeholder="contact_page.email_placeholder" placeholder="Email" required>
+                    <input type="tel" data-i18n-placeholder="contact_page.phone_placeholder" placeholder="Phone">
+                    <textarea rows="5" data-i18n-placeholder="contact_page.message_placeholder" placeholder="Message" required></textarea>
+                    <button type="submit" class="btn" style="border: none; cursor: pointer;" data-i18n="contact_page.submit_btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h3 data-i18n="contact_page.location_title">Location</h3>
+                <p data-i18n="contact_page.location_address">1-2-3 Shibuya, Shibuya-ku, Tokyo 150-0002</p>
+
+                <h3 data-i18n="contact_page.hours_title">Hours</h3>
+                <p data-i18n="contact_page.hours_weekday">Mon - Fri: 6:00 - 23:00</p>
+                <p data-i18n="contact_page.hours_weekend">Sat - Sun: 8:00 - 22:00</p>
+
+                <h3 data-i18n="contact_page.contact_title">Contact</h3>
+                <p data-i18n="contact_page.phone">Phone: 03-1234-5678</p>
+                <p data-i18n="contact_page.email">Email: info@ironcoregym.jp</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html" data-i18n="nav.home">HOME</a>
+            <a href="../about/index.html" data-i18n="nav.about">ABOUT</a>
+            <a href="../service/index.html" data-i18n="nav.service">SERVICE</a>
+            <a href="../price/index.html" data-i18n="nav.price">PRICE</a>
+            <a href="index.html" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <p class="copyright" data-i18n="footer.copyright">&copy; 2024 IRON CORE GYM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

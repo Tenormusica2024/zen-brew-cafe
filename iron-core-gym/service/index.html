@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICE | IRON CORE GYM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">IRON CORE</div>
+        <div class="lang-switch" id="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ja">JP</button>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="../index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="../about/index.html" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="index.html" data-i18n="nav.service">SERVICE</a></li>
+                <li><a href="../price/index.html" data-i18n="nav.price">PRICE</a></li>
+                <li><a href="../contact/index.html" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 60vh; background-image: url('../assets/workout.jpg');">
+        <div class="hero-content">
+            <h1 data-i18n="service_page.hero_title">Services</h1>
+            <p data-i18n="service_page.hero_subtitle">Elevate Your Performance</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-i18n="service_page.programs_title">TRAINING PROGRAMS</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 data-i18n="service_page.personal_title">Personal Training</h3>
+                <p data-i18n="service_page.personal_desc">Get personalized attention from our expert trainers. We build a custom plan based on your goals, whether it's weight loss, muscle gain, or athletic performance.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-i18n="service_page.group_title">Group Fitness</h3>
+                <p data-i18n="service_page.group_desc">Join our high-energy classes. From HIIT to Yoga, we have something for everyone. Push yourself alongside a motivated community.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-i18n="service_page.nutrition_title">Nutrition Coaching</h3>
+                <p data-i18n="service_page.nutrition_desc">Fuel your body right. Our nutritionists will help you create a diet plan that complements your training and lifestyle.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-i18n="service_page.facilities_title">FACILITIES</h2>
+        <div class="about-preview">
+            <div class="about-image">
+                <img src="../assets/amenities.jpg" alt="Locker Room">
+            </div>
+            <div class="about-text">
+                <h3 data-i18n="service_page.amenities_title">Premium Amenities</h3>
+                <p data-i18n="service_page.amenities_desc">Relax and recover in our luxury locker rooms, complete with saunas and steam rooms. We also offer a towel service and premium toiletries for your convenience.</p>
+                <ul>
+                    <li data-i18n="service_page.amenity1">- Spacious Locker Rooms</li>
+                    <li data-i18n="service_page.amenity2">- Sauna & Steam Room</li>
+                    <li data-i18n="service_page.amenity3">- Protein Bar & Lounge</li>
+                    <li data-i18n="service_page.amenity4">- Free Wi-Fi</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html" data-i18n="nav.home">HOME</a>
+            <a href="../about/index.html" data-i18n="nav.about">ABOUT</a>
+            <a href="index.html" data-i18n="nav.service">SERVICE</a>
+            <a href="../price/index.html" data-i18n="nav.price">PRICE</a>
+            <a href="../contact/index.html" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <p class="copyright" data-i18n="footer.copyright">&copy; 2024 IRON CORE GYM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRICE | IRON CORE GYM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .price-card {
+            background-color: var(--secondary-bg);
+            padding: 40px;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: transform var(--transition-speed);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .price-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-color);
+        }
+
+        .price-amount {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin: 20px 0;
+        }
+
+        .price-features {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .price-features li {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">IRON CORE</div>
+        <div class="lang-switch" id="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ja">JP</button>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="../index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="../about/index.html" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="../service/index.html" data-i18n="nav.service">SERVICE</a></li>
+                <li><a href="index.html" data-i18n="nav.price">PRICE</a></li>
+                <li><a href="../contact/index.html" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 60vh; background-image: url('../assets/hero.jpg');">
+        <div class="hero-content">
+            <h1 data-i18n="price_page.hero_title">Membership Plans</h1>
+            <p data-i18n="price_page.hero_subtitle">Invest in Yourself</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-i18n="price_page.plans_title">CHOOSE YOUR PLAN</h2>
+        <div class="services-grid">
+            <div class="price-card">
+                <h3 data-i18n="price_page.standard_title">STANDARD</h3>
+                <div class="price-amount">¥8,000<span style="font-size: 1rem; color: #fff;">/mo</span></div>
+                <ul class="price-features">
+                    <li data-i18n="price_page.standard_feature1">Access to Gym Floor</li>
+                    <li data-i18n="price_page.standard_feature2">Locker Room Access</li>
+                    <li data-i18n="price_page.standard_feature3">Free Wi-Fi</li>
+                    <li data-i18n="price_page.standard_feature4">Standard Hours (9:00 - 22:00)</li>
+                </ul>
+                <a href="../contact/index.html" class="btn" data-i18n="price_page.join_btn">Join Now</a>
+            </div>
+            <div class="price-card" style="border-color: var(--accent-color);">
+                <h3 data-i18n="price_page.premium_title">PREMIUM</h3>
+                <div class="price-amount">¥12,000<span style="font-size: 1rem; color: #fff;">/mo</span></div>
+                <ul class="price-features">
+                    <li data-i18n="price_page.premium_feature1">24/7 Access</li>
+                    <li data-i18n="price_page.premium_feature2">All Group Classes Included</li>
+                    <li data-i18n="price_page.premium_feature3">Towel Service</li>
+                    <li data-i18n="price_page.premium_feature4">1 Guest Pass / Month</li>
+                </ul>
+                <a href="../contact/index.html" class="btn" data-i18n="price_page.join_btn">Join Now</a>
+            </div>
+            <div class="price-card">
+                <h3 data-i18n="price_page.vip_title">VIP</h3>
+                <div class="price-amount">¥25,000<span style="font-size: 1rem; color: #fff;">/mo</span></div>
+                <ul class="price-features">
+                    <li data-i18n="price_page.vip_feature1">24/7 Access</li>
+                    <li data-i18n="price_page.vip_feature2">Unlimited Classes</li>
+                    <li data-i18n="price_page.vip_feature3">4 Personal Training Sessions</li>
+                    <li data-i18n="price_page.vip_feature4">Private Locker</li>
+                </ul>
+                <a href="../contact/index.html" class="btn" data-i18n="price_page.join_btn">Join Now</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html" data-i18n="nav.home">HOME</a>
+            <a href="../about/index.html" data-i18n="nav.about">ABOUT</a>
+            <a href="../service/index.html" data-i18n="nav.service">SERVICE</a>
+            <a href="index.html" data-i18n="nav.price">PRICE</a>
+            <a href="../contact/index.html" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <p class="copyright" data-i18n="footer.copyright">&copy; 2024 IRON CORE GYM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

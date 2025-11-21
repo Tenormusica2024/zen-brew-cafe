@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABOUT | IRON CORE GYM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">IRON CORE</div>
+        <div class="lang-switch" id="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ja">JP</button>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="../index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="index.html" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="../service/index.html" data-i18n="nav.service">SERVICE</a></li>
+                <li><a href="../price/index.html" data-i18n="nav.price">PRICE</a></li>
+                <li><a href="../contact/index.html" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero" style="height: 60vh; background-image: url('../assets/interior.jpg');">
+        <div class="hero-content">
+            <h1 data-i18n="about_page.hero_title">About Us</h1>
+            <p data-i18n="about_page.hero_subtitle">The Philosophy of Strength</p>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-i18n="about_page.concept_title">OUR CONCEPT</h2>
+        <div class="about-preview">
+            <div class="about-text">
+                <h3 data-i18n="about_page.concept_heading">Forged in Iron</h3>
+                <p data-i18n="about_page.concept_p1">At IRON CORE, we believe that strength is not just physical, but mental. Our facility is designed to strip away distractions and focus purely on the work. We provide the best equipment, the best atmosphere, and the best community for those who are serious about their fitness journey.</p>
+                <p data-i18n="about_page.concept_p2">Founded in 2024, we have quickly become the go-to destination for bodybuilders, powerlifters, and fitness enthusiasts who demand more from their gym.</p>
+            </div>
+            <div class="about-image">
+                <img src="../assets/hero.jpg" alt="Gym Concept">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title" data-i18n="about_page.team_title">OUR TEAM</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 data-i18n="about_page.team1_name">Kenji Sato</h3>
+                <p data-i18n="about_page.team1_role">Head Trainer. Specialist in Hypertrophy and Strength Conditioning.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-i18n="about_page.team2_name">Lisa Tanaka</h3>
+                <p data-i18n="about_page.team2_role">Yoga & Mobility Coach. Focuses on injury prevention and flexibility.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-i18n="about_page.team3_name">Mike Williams</h3>
+                <p data-i18n="about_page.team3_role">Powerlifting Coach. Former national champion.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="../index.html" data-i18n="nav.home">HOME</a>
+            <a href="index.html" data-i18n="nav.about">ABOUT</a>
+            <a href="../service/index.html" data-i18n="nav.service">SERVICE</a>
+            <a href="../price/index.html" data-i18n="nav.price">PRICE</a>
+            <a href="../contact/index.html" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <p class="copyright" data-i18n="footer.copyright">&copy; 2024 IRON CORE GYM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRON CORE GYM | Tokyo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">IRON CORE</div>
+        <div class="lang-switch" id="lang-switch">
+            <button class="lang-btn active" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ja">JP</button>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+            <span>&#9776;</span>
+        </div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html" data-i18n="nav.home">HOME</a></li>
+                <li><a href="about/index.html" data-i18n="nav.about">ABOUT</a></li>
+                <li><a href="service/index.html" data-i18n="nav.service">SERVICE</a></li>
+                <li><a href="price/index.html" data-i18n="nav.price">PRICE</a></li>
+                <li><a href="contact/index.html" data-i18n="nav.contact">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1 data-i18n="hero.title">Redefine Your Limits</h1>
+            <p data-i18n="hero.subtitle">The ultimate training environment for those who demand excellence.</p>
+            <a href="contact/index.html" class="btn" data-i18n="hero.cta">Join Now</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title" data-i18n="about.title">ABOUT US</h2>
+        <div class="about-preview">
+            <div class="about-image">
+                <img src="assets/interior.jpg" alt="Gym Interior">
+            </div>
+            <div class="about-text">
+                <h3 data-i18n="about.heading">We Build Champions</h3>
+                <p data-i18n="about.description">IRON CORE is more than just a gym. It's a sanctuary for dedication and discipline. Our state-of-the-art facility is designed to push you to your absolute best.</p>
+                <a href="about/index.html" class="btn" data-i18n="about.cta">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2 class="section-title" data-i18n="services.title">OUR SERVICES</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3 data-i18n="services.personal.title">Personal Training</h3>
+                <p data-i18n="services.personal.description">One-on-one coaching tailored to your specific goals and physiology.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-i18n="services.group.title">Group Classes</h3>
+                <p data-i18n="services.group.description">High-intensity interval training, yoga, and boxing in a motivating group setting.</p>
+            </div>
+            <div class="service-card">
+                <h3 data-i18n="services.open.title">Open Gym</h3>
+                <p data-i18n="services.open.description">24/7 access to premium equipment for your independent training sessions.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="service/index.html" class="btn" data-i18n="services.cta">View All Services</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html" data-i18n="nav.home">HOME</a>
+            <a href="about/index.html" data-i18n="nav.about">ABOUT</a>
+            <a href="service/index.html" data-i18n="nav.service">SERVICE</a>
+            <a href="price/index.html" data-i18n="nav.price">PRICE</a>
+            <a href="contact/index.html" data-i18n="nav.contact">CONTACT</a>
+        </div>
+        <p class="copyright" data-i18n="footer.copyright">&copy; 2024 IRON CORE GYM. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
